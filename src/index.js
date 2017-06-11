@@ -3,7 +3,7 @@ import { StyleSheet, css } from 'aphrodite';
 
 let baseRoute = "";
 if (process.env.NODE_ENV === "production") {
-
+baseRoute = "rad.wtf"
 } else if (process.env.NODE_ENV === "github") {
 
 }
