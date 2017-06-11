@@ -1,0 +1,1 @@
+export const JSON_PATH = "https://storage.googleapis.com/samrad-chewb/json/";
