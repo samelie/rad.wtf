@@ -59,9 +59,13 @@ body {
     }
 
     &--item{
+        margin-bottom: 10px;
+        &.selected,
         &:hover{
             cursor: pointer;
             text-decoration: underline;
         }
+
+
     }
 }

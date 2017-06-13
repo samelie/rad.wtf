@@ -1,10 +1,13 @@
 module.exports = (state, emitter) => {
 
   emitter.on('site-clicked', (label) => {
-    console.log(label);
+
     state.sites.forEach(site => {
       site.selected = site.label === label
     })
+
+    emitter.emit('render')
+
   })
 
   state.sites = [{
