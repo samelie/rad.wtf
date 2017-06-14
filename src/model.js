@@ -22,6 +22,14 @@ module.exports = (state, emitter) => {
     label: 'Mars',
     selected: false,
     url: 'https://samelie.github.io/mars-amenothep/'
+  },{
+    label: 'Chromegno.me',
+    selected: false,
+    url: 'https://samelie.github.io/chromegno.me/'
+  },{
+    label: 'Bushel Hyde//Moon',
+    selected: false,
+    url: 'https://samelie.github.io/bushel-hyde-moon/'
   }]
 
   emitter.emit('render')
