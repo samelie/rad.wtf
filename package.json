@@ -32,6 +32,7 @@
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
+    "autoprefixer": "^9.5.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
@@ -46,19 +47,20 @@
     "gulp-inline-base64": "^0.1.5",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "minimist": "^1.2.0",
     "node-reset-scss": "^1.0.1",
     "node-sass": "^4.11.0",
     "sass-breakpoints": "^2.1.0",
     "sass-ems": "^1.0.3",
     "sass-module-importer": "^1.4.0",
-    "uglifyify": "^5.0.1"
+    "terser": "^3.17.0"
   },
   "scripts": {
     "start": "concurrently \"npm run start:css\" \"npm run start:js\"",
     "start:js": "budo src/index.js:bundle.js --live --dir . --host 0.0.0.0 -- -t babelify -t [ envify --NODE_ENV development ]",
     "start:css": "gulp",
-    "build": "browserify src/index.js -t [ envify --NODE_ENV production ] -t babelify | uglifyjs > bundle.js && gulp sass --production"
+    "build": "browserify src/index.js -t [ envify --NODE_ENV production ] -t babelify | terser > bundle.js && gulp sass --production"
   },
   "keywords": [],
   "repository": {
