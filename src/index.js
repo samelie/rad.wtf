@@ -1,10 +1,9 @@
 import { cover, contain } from 'intrinsic-scale';
 import { StyleSheet, css } from 'aphrodite';
 
-const isProd = process.env.NODE_ENV === "production"
-let baseRoute = "";
-if (isProd) {
-baseRoute = "rad.wtf"
+let baseRoute = "*";
+if (process.env.NODE_ENV === "production") {
+
 } else if (process.env.NODE_ENV === "github") {
 
 }
@@ -47,7 +46,7 @@ function mainView(state, prev, send) {
     </div>
   `
 }
-app.route(`/${baseRoute}`, mainView)
+app.route(baseRoute, mainView)
 
 var tree = app.start()
 document.body.appendChild(tree)
