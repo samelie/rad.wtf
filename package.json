@@ -18,7 +18,7 @@
     "choo-log": "^6.1.2",
     "concurrently": "^3.4.0",
     "fastclick": "^1.0.6",
-    "gsap": "^2.1.2",
+    "gsap": "^3.6.0",
     "intrinsic-scale": "^3.0.3",
     "lodash": "^4.17.4",
     "raf-loop": "^1.1.3",
