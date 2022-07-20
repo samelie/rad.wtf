@@ -54,7 +54,7 @@
     "sass-breakpoints": "^2.1.0",
     "sass-ems": "^1.0.3",
     "sass-module-importer": "^1.4.0",
-    "terser": "^3.17.0"
+    "terser": "^4.8.1"
   },
   "scripts": {
     "start": "concurrently \"npm run start:css\" \"npm run start:js\"",
